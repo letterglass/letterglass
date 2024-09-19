@@ -1,0 +1,44 @@
+.message {
+  margin: 1rem 2rem;
+
+  &:not(:last-child) {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &.plain {
+    pre {
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .sender {
+      .name {
+        font-weight: bold;
+      }
+
+      .address {
+        color: #666;
+        font-size: 0.9em;
+      }
+    }
+
+    .recipients {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .date {
+      color: #666;
+    }
+
+    .right {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "letterglass",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach -Api --topological-dev run build",
+    "build:deps": "yarn workspaces foreach -Api --topological-dev --exclude @letterglass/client --exclude @letterglass/server --exclude letterglass run build",
+    "start": "yarn workspace @letterglass/server run start",
+    "dev": "yarn workspaces foreach -Rpi --from '@letterglass/{client,server}' run dev",
+    "lint": "yarn workspaces foreach -Api run lint",
+    "test": "vitest"
+  },
+  "packageManager": "yarn@4.5.0",
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "typescript-eslint": "^8.4.0",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "dotenv-flow": "^4.1.0"
+  }
+}

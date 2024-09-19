@@ -1,0 +1,16 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+
+  .item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &.selected {
+      background-color: #aaa;
+    }
+  }
+}
